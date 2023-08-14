@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabla de Vacunaciones</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vacunaciones contra el Sarampión en Niños entre 12-23 meses</h1>
+    <table>
+        <tr>
+            <th>Año</th>
+            <th>Vacunados</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row['anio'] }}</td>
+            <td>{{ row['vacunados'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
